@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>May Holidays</title>
+</head>
+<body>
+
+<h1>Optimal Cities for travel</h1>
+
+<style>
+    table, td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+<table style='width:60%'>
+    <tr>
+        <th>City</th>
+        <th>Weather forecast on Friday 21.04.17</th>
+        <th>Weather forecast on Saturday 22.04.17</th>
+        <th>Weather forecast on Sunday 23.04.17</th>
+    </tr>
+
+    <tr>
+        <th> Canberra, Australia </th>
+            <th>
+            Morning temperature: 11.73&deg;C<br>
+            Day temperature: 17.25&deg;C<br>
+            Evening temperature: 12.01&deg;C<br>
+            Night temperature: 10.4&deg;C<br>
+            Pressure: 952.03 hPa<br>
+            Humidity: 82 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 1.66 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 10.01&deg;C<br>
+            Day temperature: 16.25&deg;C<br>
+            Evening temperature: 11.7&deg;C<br>
+            Night temperature: 6.38&deg;C<br>
+            Pressure: 950.37 hPa<br>
+            Humidity: 91 %<br>
+            Cloudiness: 24 %<br>
+            Weather: Rain <br>
+            Wind Speed: 2.22 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.69&deg;C<br>
+            Day temperature: 16.63&deg;C<br>
+            Evening temperature: 13.19&deg;C<br>
+            Night temperature: 12.51&deg;C<br>
+            Pressure: 950.64 hPa<br>
+            Humidity: 89 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.71 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Wellington, New Zealand </th>
+            <th>
+            Morning temperature: 15.45&deg;C<br>
+            Day temperature: 14.96&deg;C<br>
+            Evening temperature: 14.51&deg;C<br>
+            Night temperature: 15.83&deg;C<br>
+            Pressure: 1036.76 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 5.01 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 15.67&deg;C<br>
+            Day temperature: 14.42&deg;C<br>
+            Evening temperature: 14.33&deg;C<br>
+            Night temperature: 15.66&deg;C<br>
+            Pressure: 1037.13 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 3.85 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 15.51&deg;C<br>
+            Day temperature: 14.89&deg;C<br>
+            Evening temperature: 13.53&deg;C<br>
+            Night temperature: 14.83&deg;C<br>
+            Pressure: 1027.06 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.96 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Victoria, Canada </th>
+            <th>
+            Morning temperature: 5.9&deg;C<br>
+            Day temperature: 11.51&deg;C<br>
+            Evening temperature: 10.5&deg;C<br>
+            Night temperature: 10.85&deg;C<br>
+            Pressure: 1016.77 hPa<br>
+            Humidity: 81 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.02 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 11.68&deg;C<br>
+            Day temperature: 11.19&deg;C<br>
+            Evening temperature: 9.28&deg;C<br>
+            Night temperature: 7.54&deg;C<br>
+            Pressure: 999.92 hPa<br>
+            Humidity: 92 %<br>
+            Cloudiness: 68 %<br>
+            Weather: Rain <br>
+            Wind Speed: 3.76 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.77&deg;C<br>
+            Day temperature: 10.1&deg;C<br>
+            Evening temperature: 10.61&deg;C<br>
+            Night temperature: 7.78&deg;C<br>
+            Pressure: 999.46 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.97 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Edinburgh, United Kingdom </th>
+            <th>
+            Morning temperature: 8.8&deg;C<br>
+            Day temperature: 11.01&deg;C<br>
+            Evening temperature: 9.96&deg;C<br>
+            Night temperature: 3.73&deg;C<br>
+            Pressure: 1016.09 hPa<br>
+            Humidity: 73 %<br>
+            Cloudiness: 68 %<br>
+            Weather: Rain <br>
+            Wind Speed: 7.16 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 1.72&deg;C<br>
+            Day temperature: 8.97&deg;C<br>
+            Evening temperature: 8.78&deg;C<br>
+            Night temperature: 4.21&deg;C<br>
+            Pressure: 1018.89 hPa<br>
+            Humidity: 68 %<br>
+            Cloudiness: 24 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 4.45 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.91&deg;C<br>
+            Day temperature: 10.29&deg;C<br>
+            Evening temperature: 8.93&deg;C<br>
+            Night temperature: 5.03&deg;C<br>
+            Pressure: 1002.42 hPa<br>
+            Humidity: 69 %<br>
+            Cloudiness: 68 %<br>
+            Weather: Rain <br>
+            Wind Speed: 9.96 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Adelaide, Australia </th>
+            <th>
+            Morning temperature: 18.72&deg;C<br>
+            Day temperature: 19.53&deg;C<br>
+            Evening temperature: 17.16&deg;C<br>
+            Night temperature: 16.2&deg;C<br>
+            Pressure: 1020.69 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Rain <br>
+            Wind Speed: 2.56 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 15.61&deg;C<br>
+            Day temperature: 18.6&deg;C<br>
+            Evening temperature: 18.1&deg;C<br>
+            Night temperature: 16.68&deg;C<br>
+            Pressure: 1023.08 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 56 %<br>
+            Weather: Rain <br>
+            Wind Speed: 2.12 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 16.59&deg;C<br>
+            Day temperature: 19.93&deg;C<br>
+            Evening temperature: 18.89&deg;C<br>
+            Night temperature: 18.66&deg;C<br>
+            Pressure: 1022.54 hPa<br>
+            Humidity: 97 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.41 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Melbourne, Australia </th>
+            <th>
+            Morning temperature: 15.55&deg;C<br>
+            Day temperature: 16.5&deg;C<br>
+            Evening temperature: 15.86&deg;C<br>
+            Night temperature: 15.65&deg;C<br>
+            Pressure: 1015.26 hPa<br>
+            Humidity: 97 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.36 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 14.71&deg;C<br>
+            Day temperature: 17.6&deg;C<br>
+            Evening temperature: 15.95&deg;C<br>
+            Night temperature: 14.53&deg;C<br>
+            Pressure: 1019.51 hPa<br>
+            Humidity: 94 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.42 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 14.04&deg;C<br>
+            Day temperature: 16.03&deg;C<br>
+            Evening temperature: 13.94&deg;C<br>
+            Night temperature: 11.56&deg;C<br>
+            Pressure: 1022.14 hPa<br>
+            Humidity: 95 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.31 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Brisbane, Australia </th>
+            <th>
+            Morning temperature: 15.59&deg;C<br>
+            Day temperature: 19.83&deg;C<br>
+            Evening temperature: 19&deg;C<br>
+            Night temperature: 17.61&deg;C<br>
+            Pressure: 1026.59 hPa<br>
+            Humidity: 74 %<br>
+            Cloudiness: 76 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.36 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 16.91&deg;C<br>
+            Day temperature: 18.33&deg;C<br>
+            Evening temperature: 20.07&deg;C<br>
+            Night temperature: 19.07&deg;C<br>
+            Pressure: 1024.99 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 3.66 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 18.18&deg;C<br>
+            Day temperature: 21.46&deg;C<br>
+            Evening temperature: 21.86&deg;C<br>
+            Night temperature: 18.19&deg;C<br>
+            Pressure: 1024.14 hPa<br>
+            Humidity: 94 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Rain <br>
+            Wind Speed: 3.21 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Sacramento, CA, United States </th>
+            <th>
+            Morning temperature: 9.85&deg;C<br>
+            Day temperature: 21.81&deg;C<br>
+            Evening temperature: 17.4&deg;C<br>
+            Night temperature: 9&deg;C<br>
+            Pressure: 1021.39 hPa<br>
+            Humidity: 72 %<br>
+            Cloudiness: 12 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 2.92 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 11.48&deg;C<br>
+            Day temperature: 21.49&deg;C<br>
+            Evening temperature: 17.48&deg;C<br>
+            Night temperature: 8.24&deg;C<br>
+            Pressure: 1019.79 hPa<br>
+            Humidity: 70 %<br>
+            Cloudiness: 80 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 2.21 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.82&deg;C<br>
+            Day temperature: 17.45&deg;C<br>
+            Evening temperature: 19.91&deg;C<br>
+            Night temperature: 9.93&deg;C<br>
+            Pressure: 945.15 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 13 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.23 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Bursa, Turkey </th>
+            <th>
+            Morning temperature: 6.9&deg;C<br>
+            Day temperature: 7.01&deg;C<br>
+            Evening temperature: 6.9&deg;C<br>
+            Night temperature: 4.76&deg;C<br>
+            Pressure: 993.28 hPa<br>
+            Humidity: 98 %<br>
+            Cloudiness: 88 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.96 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.5&deg;C<br>
+            Day temperature: 8.85&deg;C<br>
+            Evening temperature: 8.63&deg;C<br>
+            Night temperature: 5.94&deg;C<br>
+            Pressure: 995.96 hPa<br>
+            Humidity: 85 %<br>
+            Cloudiness: 56 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 2.05 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 2.13&deg;C<br>
+            Day temperature: 11.74&deg;C<br>
+            Evening temperature: 13.66&deg;C<br>
+            Night temperature: 8.24&deg;C<br>
+            Pressure: 995.72 hPa<br>
+            Humidity: 75 %<br>
+            Cloudiness: 12 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.71 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Luxembourg, Luxembourg </th>
+            <th>
+            Morning temperature: 0&deg;C<br>
+            Day temperature: 14.21&deg;C<br>
+            Evening temperature: 13.41&deg;C<br>
+            Night temperature: 5.58&deg;C<br>
+            Pressure: 1000.76 hPa<br>
+            Humidity: 51 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 3.66 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.42&deg;C<br>
+            Day temperature: 11.07&deg;C<br>
+            Evening temperature: 8.68&deg;C<br>
+            Night temperature: 1.11&deg;C<br>
+            Pressure: 997.01 hPa<br>
+            Humidity: 65 %<br>
+            Cloudiness: 36 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.45 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 0.31&deg;C<br>
+            Day temperature: 10.29&deg;C<br>
+            Evening temperature: 11.53&deg;C<br>
+            Night temperature: 1.33&deg;C<br>
+            Pressure: 993.58 hPa<br>
+            Humidity: 65 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 1.31 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Cork, Ireland </th>
+            <th>
+            Morning temperature: 1.5&deg;C<br>
+            Day temperature: 14.46&deg;C<br>
+            Evening temperature: 14.21&deg;C<br>
+            Night temperature: 6.98&deg;C<br>
+            Pressure: 1032.95 hPa<br>
+            Humidity: 73 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.91 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 3.62&deg;C<br>
+            Day temperature: 13.62&deg;C<br>
+            Evening temperature: 13.98&deg;C<br>
+            Night temperature: 9.71&deg;C<br>
+            Pressure: 1030.65 hPa<br>
+            Humidity: 81 %<br>
+            Cloudiness: 12 %<br>
+            Weather: Rain <br>
+            Wind Speed: 2 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.96&deg;C<br>
+            Day temperature: 14.24&deg;C<br>
+            Evening temperature: 13.28&deg;C<br>
+            Night temperature: 7.48&deg;C<br>
+            Pressure: 1021.06 hPa<br>
+            Humidity: 78 %<br>
+            Cloudiness: 36 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 3.21 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Portland, OR, United States </th>
+            <th>
+            Morning temperature: 4.9&deg;C<br>
+            Day temperature: 15.06&deg;C<br>
+            Evening temperature: 12.7&deg;C<br>
+            Night temperature: 11.95&deg;C<br>
+            Pressure: 1001.45 hPa<br>
+            Humidity: 69 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.67 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 11.18&deg;C<br>
+            Day temperature: 12.14&deg;C<br>
+            Evening temperature: 10.68&deg;C<br>
+            Night temperature: 8.14&deg;C<br>
+            Pressure: 993.84 hPa<br>
+            Humidity: 79 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.11 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 9.42&deg;C<br>
+            Day temperature: 10.2&deg;C<br>
+            Evening temperature: 10.86&deg;C<br>
+            Night temperature: 7.68&deg;C<br>
+            Pressure: 1000.88 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 45 %<br>
+            Weather: Rain <br>
+            Wind Speed: 2.21 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Copenhagen, Denmark </th>
+            <th>
+            Morning temperature: 8.15&deg;C<br>
+            Day temperature: 9.36&deg;C<br>
+            Evening temperature: 7.51&deg;C<br>
+            Night temperature: 5.83&deg;C<br>
+            Pressure: 1025.57 hPa<br>
+            Humidity: 78 %<br>
+            Cloudiness: 76 %<br>
+            Weather: Rain <br>
+            Wind Speed: 11.66 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.02&deg;C<br>
+            Day temperature: 8.97&deg;C<br>
+            Evening temperature: 7.48&deg;C<br>
+            Night temperature: 5.61&deg;C<br>
+            Pressure: 1021.89 hPa<br>
+            Humidity: 74 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 10.3 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.31&deg;C<br>
+            Day temperature: 6.69&deg;C<br>
+            Evening temperature: 5.58&deg;C<br>
+            Night temperature: 5.38&deg;C<br>
+            Pressure: 1024.39 hPa<br>
+            Humidity: 80 %<br>
+            Cloudiness: 12 %<br>
+            Weather: Rain <br>
+            Wind Speed: 9.16 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Boston, MA, United States </th>
+            <th>
+            Morning temperature: 7.11&deg;C<br>
+            Day temperature: 6.85&deg;C<br>
+            Evening temperature: 6.76&deg;C<br>
+            Night temperature: 7.2&deg;C<br>
+            Pressure: 1030.48 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 7.01 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.35&deg;C<br>
+            Day temperature: 7.03&deg;C<br>
+            Evening temperature: 7.39&deg;C<br>
+            Night temperature: 4.63&deg;C<br>
+            Pressure: 1025.74 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 76 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.71 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.07&deg;C<br>
+            Day temperature: 7.25&deg;C<br>
+            Evening temperature: 6.86&deg;C<br>
+            Night temperature: 6.08&deg;C<br>
+            Pressure: 1017.29 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 99 %<br>
+            Weather: Rain <br>
+            Wind Speed: 3.12 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Leeds, United Kingdom </th>
+            <th>
+            Morning temperature: 8.25&deg;C<br>
+            Day temperature: 12.66&deg;C<br>
+            Evening temperature: 11.26&deg;C<br>
+            Night temperature: 6.48&deg;C<br>
+            Pressure: 1020.14 hPa<br>
+            Humidity: 76 %<br>
+            Cloudiness: 12 %<br>
+            Weather: Rain <br>
+            Wind Speed: 7.46 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 3.42&deg;C<br>
+            Day temperature: 9.47&deg;C<br>
+            Evening temperature: 9.68&deg;C<br>
+            Night temperature: 3.46&deg;C<br>
+            Pressure: 1021.16 hPa<br>
+            Humidity: 78 %<br>
+            Cloudiness: 8 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.65 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.51&deg;C<br>
+            Day temperature: 10.89&deg;C<br>
+            Evening temperature: 10.43&deg;C<br>
+            Night temperature: 8.38&deg;C<br>
+            Pressure: 1008.82 hPa<br>
+            Humidity: 75 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Rain <br>
+            Wind Speed: 8.61 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Gothenburg, Sweden </th>
+            <th>
+            Morning temperature: 6.4&deg;C<br>
+            Day temperature: 8.31&deg;C<br>
+            Evening temperature: 6.76&deg;C<br>
+            Night temperature: 6.18&deg;C<br>
+            Pressure: 1016.49 hPa<br>
+            Humidity: 77 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 9.56 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.02&deg;C<br>
+            Day temperature: 8.82&deg;C<br>
+            Evening temperature: 6.93&deg;C<br>
+            Night temperature: 5.61&deg;C<br>
+            Pressure: 1017.35 hPa<br>
+            Humidity: 57 %<br>
+            Cloudiness: 8 %<br>
+            Weather: Clear <br>
+            Wind Speed: 6.55 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.01&deg;C<br>
+            Day temperature: 6.19&deg;C<br>
+            Evening temperature: 4.88&deg;C<br>
+            Night temperature: 2.78&deg;C<br>
+            Pressure: 1017.82 hPa<br>
+            Humidity: 67 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Snow <br>
+            Wind Speed: 5.16 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Seattle, WA, United States </th>
+            <th>
+            Morning temperature: 7.75&deg;C<br>
+            Day temperature: 14.11&deg;C<br>
+            Evening temperature: 13.8&deg;C<br>
+            Night temperature: 10.05&deg;C<br>
+            Pressure: 1028.03 hPa<br>
+            Humidity: 71 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 2.27 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 11.88&deg;C<br>
+            Day temperature: 14.09&deg;C<br>
+            Evening temperature: 11.88&deg;C<br>
+            Night temperature: 8.49&deg;C<br>
+            Pressure: 1014.92 hPa<br>
+            Humidity: 76 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.26 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.67&deg;C<br>
+            Day temperature: 9.45&deg;C<br>
+            Evening temperature: 8.91&deg;C<br>
+            Night temperature: 5.68&deg;C<br>
+            Pressure: 975.75 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 41 %<br>
+            Weather: Rain <br>
+            Wind Speed: 0.74 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Hamilton, Canada </th>
+            <th>
+            Morning temperature: 9.51&deg;C<br>
+            Day temperature: 11.51&deg;C<br>
+            Evening temperature: 7.48&deg;C<br>
+            Night temperature: 4.22&deg;C<br>
+            Pressure: 1003.02 hPa<br>
+            Humidity: 76 %<br>
+            Cloudiness: 56 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 9.76 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.07&deg;C<br>
+            Day temperature: 10.88&deg;C<br>
+            Evening temperature: 9.76&deg;C<br>
+            Night temperature: 4.46&deg;C<br>
+            Pressure: 1011.57 hPa<br>
+            Humidity: 80 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 3.37 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.07&deg;C<br>
+            Day temperature: 9.7&deg;C<br>
+            Evening temperature: 8.31&deg;C<br>
+            Night temperature: 3.03&deg;C<br>
+            Pressure: 991.96 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 38 %<br>
+            Weather: Clear <br>
+            Wind Speed: 3.76 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Vancouver, Canada </th>
+            <th>
+            Morning temperature: 6.65&deg;C<br>
+            Day temperature: 12.01&deg;C<br>
+            Evening temperature: 11.8&deg;C<br>
+            Night temperature: 9.05&deg;C<br>
+            Pressure: 1021.22 hPa<br>
+            Humidity: 83 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 0.52 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 9.48&deg;C<br>
+            Day temperature: 10.49&deg;C<br>
+            Evening temperature: 9.23&deg;C<br>
+            Night temperature: 8.59&deg;C<br>
+            Pressure: 1006.57 hPa<br>
+            Humidity: 93 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 4.01 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.47&deg;C<br>
+            Day temperature: 9.6&deg;C<br>
+            Evening temperature: 9.81&deg;C<br>
+            Night temperature: 6.98&deg;C<br>
+            Pressure: 995.61 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.66 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Amsterdam, Netherlands </th>
+            <th>
+            Morning temperature: 9.8&deg;C<br>
+            Day temperature: 13.96&deg;C<br>
+            Evening temperature: 12.46&deg;C<br>
+            Night temperature: 8.98&deg;C<br>
+            Pressure: 1042.92 hPa<br>
+            Humidity: 68 %<br>
+            Cloudiness: 36 %<br>
+            Weather: Rain <br>
+            Wind Speed: 7.36 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.97&deg;C<br>
+            Day temperature: 9.82&deg;C<br>
+            Evening temperature: 8.18&deg;C<br>
+            Night temperature: 6.96&deg;C<br>
+            Pressure: 1042.48 hPa<br>
+            Humidity: 77 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 7.7 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.51&deg;C<br>
+            Day temperature: 11.24&deg;C<br>
+            Evening temperature: 11.93&deg;C<br>
+            Night temperature: 11.03&deg;C<br>
+            Pressure: 1036.38 hPa<br>
+            Humidity: 64 %<br>
+            Cloudiness: 76 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 7.61 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Glasgow, United Kingdom </th>
+            <th>
+            Morning temperature: 8.7&deg;C<br>
+            Day temperature: 10.11&deg;C<br>
+            Evening temperature: 9.11&deg;C<br>
+            Night temperature: 3.68&deg;C<br>
+            Pressure: 1024.68 hPa<br>
+            Humidity: 92 %<br>
+            Cloudiness: 48 %<br>
+            Weather: Rain <br>
+            Wind Speed: 6.56 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 1.47&deg;C<br>
+            Day temperature: 8.62&deg;C<br>
+            Evening temperature: 8.38&deg;C<br>
+            Night temperature: 4.06&deg;C<br>
+            Pressure: 1026.76 hPa<br>
+            Humidity: 86 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 4.45 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 6.66&deg;C<br>
+            Day temperature: 8.84&deg;C<br>
+            Evening temperature: 8.13&deg;C<br>
+            Night temperature: 4.18&deg;C<br>
+            Pressure: 1010.69 hPa<br>
+            Humidity: 84 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 8.96 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Sydney, Australia </th>
+            <th>
+            Morning temperature: 15.77&deg;C<br>
+            Day temperature: 18.52&deg;C<br>
+            Evening temperature: 20.8&deg;C<br>
+            Night temperature: 17.01&deg;C<br>
+            Pressure: 1036 hPa<br>
+            Humidity: 97 %<br>
+            Cloudiness: 56 %<br>
+            Weather: Rain <br>
+            Wind Speed: 0.86 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 16.91&deg;C<br>
+            Day temperature: 17.48&deg;C<br>
+            Evening temperature: 19.72&deg;C<br>
+            Night temperature: 16.22&deg;C<br>
+            Pressure: 1033.91 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 1.46 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 14.58&deg;C<br>
+            Day temperature: 19.46&deg;C<br>
+            Evening temperature: 21.26&deg;C<br>
+            Night temperature: 16.54&deg;C<br>
+            Pressure: 1032.57 hPa<br>
+            Humidity: 98 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 1.21 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Berlin, Germany </th>
+            <th>
+            Morning temperature: 4.65&deg;C<br>
+            Day temperature: 11.66&deg;C<br>
+            Evening temperature: 10.36&deg;C<br>
+            Night temperature: 5.73&deg;C<br>
+            Pressure: 1029.79 hPa<br>
+            Humidity: 79 %<br>
+            Cloudiness: 80 %<br>
+            Weather: Rain <br>
+            Wind Speed: 8.31 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.22&deg;C<br>
+            Day temperature: 8.27&deg;C<br>
+            Evening temperature: 7.53&deg;C<br>
+            Night temperature: 4.16&deg;C<br>
+            Pressure: 1024.32 hPa<br>
+            Humidity: 72 %<br>
+            Cloudiness: 92 %<br>
+            Weather: Rain <br>
+            Wind Speed: 10.4 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.41&deg;C<br>
+            Day temperature: 7.44&deg;C<br>
+            Evening temperature: 7.28&deg;C<br>
+            Night temperature: 6.78&deg;C<br>
+            Pressure: 1026.25 hPa<br>
+            Humidity: 70 %<br>
+            Cloudiness: 80 %<br>
+            Weather: Rain <br>
+            Wind Speed: 8.21 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Auckland, New Zealand </th>
+            <th>
+            Morning temperature: 16.8&deg;C<br>
+            Day temperature: 15.36&deg;C<br>
+            Evening temperature: 15.66&deg;C<br>
+            Night temperature: 16.93&deg;C<br>
+            Pressure: 1037.97 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 24 %<br>
+            Weather: Rain <br>
+            Wind Speed: 3.46 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 16.92&deg;C<br>
+            Day temperature: 15.32&deg;C<br>
+            Evening temperature: 15.48&deg;C<br>
+            Night temperature: 17.96&deg;C<br>
+            Pressure: 1036.97 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 4.4 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 17.31&deg;C<br>
+            Day temperature: 16.04&deg;C<br>
+            Evening temperature: 15.08&deg;C<br>
+            Night temperature: 17.48&deg;C<br>
+            Pressure: 1027.63 hPa<br>
+            Humidity: 100 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 5.51 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Toronto, Canada </th>
+            <th>
+            Morning temperature: 8.96&deg;C<br>
+            Day temperature: 10.26&deg;C<br>
+            Evening temperature: 7.43&deg;C<br>
+            Night temperature: 5.52&deg;C<br>
+            Pressure: 1004.15 hPa<br>
+            Humidity: 83 %<br>
+            Cloudiness: 20 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 7.61 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.72&deg;C<br>
+            Day temperature: 10.18&deg;C<br>
+            Evening temperature: 9.91&deg;C<br>
+            Night temperature: 4.31&deg;C<br>
+            Pressure: 1013.35 hPa<br>
+            Humidity: 74 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 4.57 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 7.02&deg;C<br>
+            Day temperature: 8.65&deg;C<br>
+            Evening temperature: 6.61&deg;C<br>
+            Night temperature: 1.88&deg;C<br>
+            Pressure: 995.21 hPa<br>
+            Humidity: 0 %<br>
+            Cloudiness: 87 %<br>
+            Weather: Clear <br>
+            Wind Speed: 3.59 meter/sec<br>
+            </th>
+    </tr>
+
+    <tr>
+        <th> Gdansk, Poland </th>
+            <th>
+            Morning temperature: 4.75&deg;C<br>
+            Day temperature: 7.36&deg;C<br>
+            Evening temperature: 7.9&deg;C<br>
+            Night temperature: 6.56&deg;C<br>
+            Pressure: 1023.84 hPa<br>
+            Humidity: 91 %<br>
+            Cloudiness: 44 %<br>
+            Weather: Rain <br>
+            Wind Speed: 10.71 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 5.25&deg;C<br>
+            Day temperature: 6.9&deg;C<br>
+            Evening temperature: 7.98&deg;C<br>
+            Night temperature: 4.49&deg;C<br>
+            Pressure: 1014.69 hPa<br>
+            Humidity: 81 %<br>
+            Cloudiness: 20 %<br>
+            Weather: Clouds <br>
+            Wind Speed: 11.85 meter/sec<br>
+            </th>
+            <th>
+            Morning temperature: 4.23&deg;C<br>
+            Day temperature: 6.59&deg;C<br>
+            Evening temperature: 6.31&deg;C<br>
+            Night temperature: 4.99&deg;C<br>
+            Pressure: 1018.74 hPa<br>
+            Humidity: 87 %<br>
+            Cloudiness: 0 %<br>
+            Weather: Clear <br>
+            Wind Speed: 7.96 meter/sec<br>
+            </th>
+    </tr>
+
+</table>
+
+</body>
+</html>
